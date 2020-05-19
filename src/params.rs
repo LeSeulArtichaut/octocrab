@@ -227,5 +227,9 @@ pub mod repos {
                 Self::Tag(tag) => format!("tags/{}", tag),
             }
         }
+
+        pub fn full_ref_url(&self) -> String {
+            format!("refs/{}", self.ref_url())
+        }
     }
 }
